@@ -38,21 +38,21 @@ export const Carousel = () => {
   //   }, [total]);
 
   return (
-    <div className="w-full h-[calc(100vh-72px)] max-sm:h-[300px] px-[10px] py-[5px] flex justify-center items-center">
-      <div className="w-full h-full relative flex justify-center items-center overflow-hidden rounded-lg shadow-lg">
+    <div className="w-full h-[calc(100vh-72px)] max-sm:h-[300px] flex justify-center items-center">
+      <div className="w-full h-full relative flex justify-center items-center overflow-hidden  shadow-lg">
         <div
-          className="w-full h-full border rounded-xl overflow-hodden flex transition-transform duration-1000 ease-in-out"
+          className="w-full h-full bg-red-400  overflow-hodden flex transition-transform duration-1000 ease-in-out"
           style={{
-            transform: `translateX(-${current * 101}%)`, // Sliding effect
+            transform: `translateX(-${current * 100}%)`, // Sliding effect
           }}
         >
           {slider.map((slide, index) => (
-            <div className="w-full h-full bg-gray-400 border">
+            <div className="min-w-[calc(100vw-15px)] max-h-full bg-gray-400 z-10 ">
               <img
                 key={index}
                 src={slide.img}
                 alt={`Slide ${slide._id}`}
-                className="w-full h-full object-cover"
+                className="w-full  h-full obj-cover "
               />
             </div>
           ))}
