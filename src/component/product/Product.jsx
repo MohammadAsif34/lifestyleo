@@ -79,9 +79,9 @@ export const Product = () => {
   ];
 
   return (
-    <div className="px-28">
+    <div className="px-28 max-sm:px-2">
       <div className="my-4 flex justify-center">
-        <ul className="flex gap-10 text-3xl capitalize text-gray-600">
+        <ul className="flex gap-10 text-3xl max-sm:text-xl capitalize text-gray-600">
           <li className="py-1 border-b-2 active:text-black ">new arrival </li>
           <li>best sale</li>
           <li>on sale</li>
@@ -95,7 +95,7 @@ export const Product = () => {
         ))}
       </div>
       <div className="my-4 flex justify-center">
-        <p className="w-fit py-2 text-xl text-gray-600 capitalize border-b-2 hover:text-red-400 cursor-pointer">
+        <p className="w-fit py-2 text-xl max-sm:text-sm text-gray-600 capitalize border-b-2 hover:text-red-400 cursor-pointer">
           view allproducts
         </p>
       </div>
@@ -111,7 +111,7 @@ const ProductCard = ({ item }) => {
   };
   return (
     <div className="w-full h-fit  overflow-hidden ">
-      <div className="w-full h-[400px] bg-gray-100 relative border rounded-xl overflow-hidden cursor-pointer">
+      <div className="w-full h-[400px] max-sm:h-[200px] bg-gray-100 relative border rounded-xl overflow-hidden cursor-pointer">
         <img src={item.image} alt="" className="w-full h-full object-cover" />
         <div className="w-full h-full p-5 absolute top-0 right-0 hover:bg-white/30 flex justify-center items-end group">
           <div className="px-8 py-2 capitalize hover:bg-black hover:text-white opacity-0 scale-95 bg-white  transition-all duration-300  rounded-full  group-hover:opacity-100 group-hover:scale-100">
@@ -119,7 +119,9 @@ const ProductCard = ({ item }) => {
           </div>
         </div>
       </div>
-      <p className="mt-4 text-xl">{item?.name || "product name"}</p>
+      <p className="mt-4 text-xl max-sm:text-lg">
+        {item?.name || "product name"}
+      </p>
       <p className="my-1 text-lg font-semibold">
         <i className="bi bi-currency-dollar"></i>
         {item?.price || "00.00"}

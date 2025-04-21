@@ -33,14 +33,14 @@ const social = [
 
 export const SocialCard = () => {
   return (
-    <div className=" py-5 px-20">
+    <div className=" py-5 px-20 max-sm:px-2">
       <h1 className="my-3 text-5xl max-sm:text-3xl capitalize text-center ">
         shop instagram
       </h1>
       <p className="text-center text-gray-600">
         Elevate your wardrobe with fresh finds today
       </p>
-      <div className="w-full h-64 my-10 grid grid-cols-6 gap-5 max-sm:grid-cols-2 ">
+      <div className="w-full h-64 max-sm:h-96 my-10 grid grid-cols-6 gap-5 max-sm:grid-cols-2 ">
         {social.map((item) => (
           <div
             key={item._id}

@@ -82,12 +82,12 @@ export const Categories = () => {
   const prevSlide = () => setSlide((prev) => prev - 17);
 
   return (
-    <div className="w-full h-fit my-8 relative px-20 ">
+    <div className="w-full h-fit my-8 relative px-20 max-sm:px-2">
       <div className="py-2  flex justify-between items-center">
-        <h1 className="text-[40px]">Categories</h1>
+        <h1 className="text-[40px] max-sm:text-2xl">Categories</h1>
         <button
           type="button"
-          className="text-lg py-1 border-b cursor-pointer hover:text-red-500 rtl transition-transform duration-300 "
+          className="text-lgtext-[12px] max-sm: py-1 border-b cursor-pointer hover:text-red-500 rtl transition-transform duration-300 "
         >
           view all collection
         </button>
@@ -110,11 +110,14 @@ export const Categories = () => {
           </button>
         )}
         <div
-          className={`z-20  flex justify-evenly transition-transform duration-700 ease-in-out `}
+          className={`z-20 flex justify-evenly transition-transform duration-700 ease-in-out `}
           style={{ transform: `translateX(-${slide}%)` }}
         >
           {categories.map((item) => (
-            <div key={item._id} className="min-w-1/6 flex justify-center">
+            <div
+              key={item._id}
+              className="min-w-1/6 max-sm:min-w-1/2 flex justify-center"
+            >
               <CategoryCard item={item} />
             </div>
           ))}

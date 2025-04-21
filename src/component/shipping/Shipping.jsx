@@ -29,13 +29,15 @@ export const ShippingBanner = () => {
     <div className="mb-16 py-4 grid grid-cols-4 max-sm:grid-cols-2">
       {shipping.map((item) => (
         <div key={item._id}>
-          <div className="my-3 flex justify-center items-center text-5xl ">
+          <div className="my-3 flex justify-center items-center text-5xl max-sm:text-4xl ">
             <i className={`bi ${item.icon}`}></i>
           </div>
-          <h2 className="my-2 text-2xl font-semibold text-center">
+          <h2 className="my-2 text-2xl max-sm:text-xl font-semibold text-center">
             {item.name}
           </h2>
-          <p className="text-center text-gray-600">{item.mssg}</p>
+          <p className="text-center max-sm:text-[12px] text-gray-600">
+            {item.mssg}
+          </p>
         </div>
       ))}
     </div>

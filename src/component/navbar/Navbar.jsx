@@ -18,7 +18,7 @@ export const Navbar = () => {
             <span className="px-2" onClick={() => setHomeOpen(!homeOpen)}>
               <i className="bi bi-x text-3xl"></i>
             </span>
-            <div className="flex flex-c justify-between items-center p-2">
+            <div className="flex flex-c justify-between items-center p-2 mb-4 border-b border-gray-300">
               <p className="text-lg font-semibold">name</p>
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img

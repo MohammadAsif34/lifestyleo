@@ -22,9 +22,7 @@ const App = () => {
           <Carousel />
           <Categories />
           <Product />
-          <div className="w-full px-20">
-            <Review />
-          </div>
+          <Review />
           <SocialCard />
           <ShippingBanner />
         </>

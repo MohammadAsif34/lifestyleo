@@ -1,9 +1,11 @@
 export const Footer = () => {
   return (
-    <footer className="w-full px-20 h-fit border-t-2 border-gray-300">
-      <div className=" my-16 flex  justify-between gap-8 max-sm:flex-col ">
-        <div className="flex-2 flex flex-col gap-1">
-          <h1 className="mb-4 font-semibold text-lg capitalize ">LifeStyle</h1>
+    <footer className="w-full px-20 max-sm:px-2 h-fit border-t-2 border-gray-300">
+      <div className=" my-16 max-sm:my-8 flex  justify-between gap-8 max-sm:flex-col ">
+        <div className="flex-2 flex flex-col gap-1 max-sm:pl-2">
+          <h1 className="mb-4 font-semibold text-lg max-sm:text-2xl max-sm:font-semibold capitalize ">
+            LifeStyleo
+          </h1>
           <p className="text-gray-400">
             94A/2, Den street, Kolkata West Bengal
           </p>
@@ -90,12 +92,12 @@ export const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="py-3   border-t-2 border-gray-300 flex justify-between gap-8">
+      <div className="py-3 border-t-2 border-gray-300 flex max-sm:flex-col justify-between gap-8 max-sm:gap-2">
         <p className="text-sm text-gray-400">
           &copy;2025 LifeStyle, All rights Reserved
         </p>
         <div className="flex items-center gap-2">
-          payment:
+          <p>payment:</p>
           <img width={50} height={20} src="/visa.png" alt="" />
           <img width={50} height={20} src="/visa.png" alt="" />
           <img width={50} height={20} src="/visa.png" alt="" />
