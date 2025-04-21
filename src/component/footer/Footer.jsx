@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="w-full px-20 h-fit border-t-2 border-gray-300">
-      <div className=" my-16 flex justify-between gap-8">
+      <div className=" my-16 flex  justify-between gap-8 max-sm:flex-col ">
         <div className="flex-2 flex flex-col gap-1">
           <h1 className="mb-4 font-semibold text-lg capitalize ">LifeStyle</h1>
           <p className="text-gray-400">

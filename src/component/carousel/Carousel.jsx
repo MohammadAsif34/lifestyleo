@@ -38,7 +38,7 @@ export const Carousel = () => {
   //   }, [total]);
 
   return (
-    <div className="w-full h-[calc(100vh-72px)] px-[10px] py-[5px] flex justify-center items-center">
+    <div className="w-full h-[calc(100vh-72px)] max-sm:h-[300px] px-[10px] py-[5px] flex justify-center items-center">
       <div className="w-full h-full relative flex justify-center items-center overflow-hidden rounded-lg shadow-lg">
         <div
           className="w-full h-full border rounded-xl overflow-hodden flex transition-transform duration-1000 ease-in-out"
