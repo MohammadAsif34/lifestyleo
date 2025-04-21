@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "_id": 1,
+      "name": "V-neck Cotton T-shirt",
+      "price": 599.99,
+      "color": ["gray-600", "blue-500", "white"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/374574/pexels-photo-374574.jpeg"
+    },
+    {
+      "_id": 2,
+      "name": "Polarized Sunglasses",
+      "price": 79.99,
+      "color": ["red-500", "green-600", "blue-400"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg"
+    },
+    {
+      "_id": 3,
+      "name": "Ramie Shirt with Pockets",
+      "price": 89.99,
+      "color": ["indigo-500", "green-500", "blue-600"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg"
+    },
+    {
+      "_id": 4,
+      "name": "Slim Fit Jeans",
+      "price": 1299.99,
+      "color": ["blue-700", "black", "gray-700"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg"
+    },
+    {
+      "_id": 5,
+      "name": "Casual Sneakers",
+      "price": 1499.0,
+      "color": ["white", "black", "gray-600"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg"
+    },
+    {
+      "_id": 6,
+      "name": "Leather Wallet",
+      "price": 499.0,
+      "color": ["brown-600", "black"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg"
+    },
+    {
+      "_id": 7,
+      "name": "Digital Sports Watch",
+      "price": 999.99,
+      "color": ["black", "red-600", "green-600"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg"
+    },
+    {
+      "_id": 8,
+      "name": "Denim Jacket",
+      "price": 1799.5,
+      "color": ["blue-800", "gray-500"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg"
+    },
+    {
+      "_id": 9,
+      "name": "Aviator Sunglasses",
+      "price": 899.99,
+      "color": ["yellow-400", "gray-300"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg"
+    },
+    {
+      "_id": 10,
+      "name": "Canvas Backpack",
+      "price": 699.0,
+      "color": ["green-700", "black", "yellow-700"],
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "image": "https://images.pexels.com/photos/374574/pexels-photo-374574.jpeg"
+    }
+  ]
+}

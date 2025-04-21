@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { AppContext } from "../../context/appContext";
+
 export const Product = () => {
   const products = [
     {
@@ -86,7 +89,9 @@ export const Product = () => {
       </div>
       <div className="my-6 p-1 grid grid-cols-5 gap-8 max-sm:grid-cols-2">
         {products.slice(0, 10).map((item) => (
-          <ProductCard key={item._id} item={item} />
+          <div key={item._id}>
+            <ProductCard item={item} />
+          </div>
         ))}
       </div>
       <div className="my-4 flex justify-center">
@@ -98,13 +103,19 @@ export const Product = () => {
   );
 };
 const ProductCard = ({ item }) => {
+  const { cartItem, setCartItem } = useContext(AppContext);
+  const handleAddCart = () => {
+    // alert("added to cart\n" + JSON.stringify(item));
+    setCartItem((prev) => [...prev, item]);
+    // alert("cartItem\n" + JSON.stringify(cartItem));
+  };
   return (
     <div className="w-full h-fit  overflow-hidden ">
-      <div className="w-full h-[400px] bg-gray-200 relative border rounded-xl overflow-hidden cursor-pointer">
+      <div className="w-full h-[400px] bg-gray-100 relative border rounded-xl overflow-hidden cursor-pointer">
         <img src={item.image} alt="" className="w-full h-full object-cover" />
         <div className="w-full h-full p-5 absolute top-0 right-0 hover:bg-white/30 flex justify-center items-end group">
           <div className="px-8 py-2 capitalize hover:bg-black hover:text-white opacity-0 scale-95 bg-white  transition-all duration-300  rounded-full  group-hover:opacity-100 group-hover:scale-100">
-            add to cart
+            <button onClick={() => handleAddCart()}>Add Cart</button>
           </div>
         </div>
       </div>
