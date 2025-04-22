@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../../context/appContext";
+import { AppContext } from "../../../context/appContext";
+// import { AppContext } from "../../context/appContext";
 
 export const Navbar = () => {
   const { cart, setCart } = useContext(AppContext);
@@ -30,16 +31,21 @@ export const Navbar = () => {
             </div>
             <div className="flex-1">
               <ul className="px-4 text-lg capitalize flex flex-col gap-2">
-                <li>home</li>
-                <li>shop</li>
-                <li>product</li>
-                <li>blog</li>
-                <li>pages</li>
+                <li className="cursor-pointer">home</li>
+                <li className="cursor-pointer">shop</li>
+                <li className="cursor-pointer">product</li>
+                <li className="cursor-pointer">blog</li>
+                <li className="cursor-pointer">pages</li>
               </ul>
             </div>
             <div className="py-4">
               <ul className="px-4 capitalize text-lg flex flex-col gap-3">
-                <li>
+                <li
+                  onClick={() => {
+                    setCart(!cart);
+                    setHomeOpen(!homeOpen);
+                  }}
+                >
                   <i className="bi bi-cart3 pr-3"></i>cart
                 </li>
                 <li>
@@ -49,7 +55,7 @@ export const Navbar = () => {
                 <li>
                   <i className="bi bi-gear pr-3"></i>setting
                 </li>
-                <li onClick={() => (cart.current = !cart.current)}>
+                <li>
                   <i className="bi bi-info-circle pr-3"></i>Help
                 </li>
               </ul>
@@ -58,27 +64,26 @@ export const Navbar = () => {
         )}
       </div>
       <div className="max-sm:hidden">
-        <ul className="flex gap-x-8 capitalize text-md">
-          <li>home</li>
-          <li>shop</li>
-          <li>product</li>
-          <li>blog</li>
-          <li>pages</li>
+        <ul className="flex items-center gap-x-8 capitalize text-md">
+          <li className="cursor-pointer hover:border-b-2 pb-2 px-2">home</li>
+          <li className="cursor-pointer hover:border-b-2 pb-2 px-2">shop</li>
+          <li className="cursor-pointer hover:border-b-2 pb-2 px-2">product</li>
+          <li className="cursor-pointer hover:border-b-2 pb-2 px-2">blog</li>
+          <li className="cursor-pointer hover:border-b-2 pb-2 px-2">pages</li>
         </ul>
       </div>
       <div className="max-sm:hidden">
-        <ul className="flex gap-x-5 capitalize text-lg">
-          <li>
+        <ul className="flex gap-x-6 capitalize text-xl">
+          <li className="cursor-pointer ">
             <i className="bi bi-search"></i>
           </li>
-          <li>
+          <li className="cursor-pointer ">
             <i className="bi bi-person text-xl"></i>
           </li>
-          <li>
-            {}
+          <li className="cursor-pointer ">
             <i className="bi bi-heart"></i>
           </li>
-          <li onClick={() => (cart.current = !cart.current)}>
+          <li className="cursor-pointer " onClick={() => setCart(!cart)}>
             <i className="bi bi-cart3"></i>
           </li>
         </ul>

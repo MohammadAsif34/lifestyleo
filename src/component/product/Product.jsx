@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppContext } from "../../context/appContext";
+import { AppContext } from "../../../context/appContext";
 
 export const Product = () => {
   const products = [
@@ -105,13 +105,11 @@ export const Product = () => {
 const ProductCard = ({ item }) => {
   const { cartItem, setCartItem } = useContext(AppContext);
   const handleAddCart = () => {
-    // alert("added to cart\n" + JSON.stringify(item));
     setCartItem((prev) => [...prev, item]);
-    // alert("cartItem\n" + JSON.stringify(cartItem));
   };
   return (
     <div className="w-full h-fit  overflow-hidden ">
-      <div className="w-full h-[400px] max-sm:h-[200px] bg-gray-100 relative border rounded-xl overflow-hidden cursor-pointer">
+      <div className="w-full h-[350px] max-sm:h-[200px] bg-gray-100 relative border rounded-xl overflow-hidden cursor-pointer">
         <img src={item.image} alt="" className="w-full h-full object-cover" />
         <div className="w-full h-full p-5 absolute top-0 right-0 hover:bg-white/30 flex justify-center items-end group">
           <div className="px-8 py-2 capitalize hover:bg-black hover:text-white opacity-0 scale-95 bg-white  transition-all duration-300  rounded-full  group-hover:opacity-100 group-hover:scale-100">
@@ -125,6 +123,12 @@ const ProductCard = ({ item }) => {
       <p className="my-1 text-lg font-semibold">
         <i className="bi bi-currency-dollar"></i>
         {item?.price || "00.00"}
+        <span
+          className="py-1 px-2 rounded-lg float-end text-xl mr-2 hover:bg-gray-100 hover:text-2xl transition-transforms duration-200 ease-in-out cursor-pointer"
+          onClick={() => handleAddCart()}
+        >
+          <i className="bi bi-cart3"></i>
+        </span>
       </p>
       <ul className="my-1 flex gap-2">
         {item?.color.map((col, index) => (

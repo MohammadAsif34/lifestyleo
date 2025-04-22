@@ -9,15 +9,15 @@ import { Review } from "./component/review/Review";
 import { SocialCard } from "./component/review/SocialCard";
 import { Product } from "./component/product/Product";
 import { Cart } from "./component/cart/Cart";
-import { AppContext } from "./context/appContext";
+import { AppContext } from "../context/appContext";
 
 const App = () => {
   const { cart } = useContext(AppContext);
   return (
     <>
       <Navbar />
-      {cart.current && <Cart />}
-      {!cart.current && (
+      {cart && <Cart />}
+      {!cart && (
         <>
           <Carousel />
           <Categories />

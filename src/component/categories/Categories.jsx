@@ -59,17 +59,17 @@ const categories = [
 const CategoryCard = ({ item }) => {
   return (
     <div className="w-fit h-fit px-4 py-6 ">
-      <div className="w-42 aspect-square border border-gray-300 rounded-full overflow-hidden cursor-pointer">
+      <div className="w-42 max-sm:w-20 max-sm:h-20 aspect-square border border-gray-300 rounded-full overflow-hidden cursor-pointer">
         <img
           alt=""
           src={item.image || "/banner_img-2.jpg"}
           className="w-full h-full rouded-full border-none object-cover hover:scale-110 duration-700"
         />
       </div>
-      <p className="mt-3 text-gray-800 font-semibold text-center text-xl capitalize">
+      <p className="mt-3 text-gray-800 font-semibold text-center text-xl max-sm:text-[18px] capitalize">
         {item.name || "name"}
       </p>
-      <p className=" my-1 text-center  text-gray-500">
+      <p className=" my-1 text-center max-sm:text-sm  text-gray-500">
         {item.item || "item"} items
       </p>
     </div>
@@ -96,7 +96,7 @@ export const Categories = () => {
         {!(slide <= 0) && (
           <button
             onClick={() => prevSlide()}
-            className="z-20 absolute left-4 top-1/3 -translate-x-4 bg-white border-2 text-xl px-3 py-2 rounded-full hover:bg-black hover:text-white"
+            className="z-20 absolute left-4 top-1/3 max-sm:top-12 -translate-x-4 bg-white border-2 text-xl px-3 py-2 max-sm:px-1.5 max-sm:py-0.5 rounded-full hover:bg-black hover:text-white"
           >
             <i className="bi bi-arrow-left"></i>
           </button>
@@ -104,7 +104,7 @@ export const Categories = () => {
         {slide < 20 && (
           <button
             onClick={() => nextSlide()}
-            className="z-20 absolute right-4 top-1/3 translate-x-4 bg-white border-2 text-xl px-3 py-2 rounded-full hover:bg-black hover:text-white"
+            className="z-20 absolute right-4 top-1/3 max-sm:top-12 translate-x-4 bg-white border-2 text-xl px-3 py-2 max-sm:px-1.5 max-sm:py-0.5 rounded-full hover:bg-black hover:text-white"
           >
             <i className="bi bi-arrow-right"></i>
           </button>
@@ -116,7 +116,7 @@ export const Categories = () => {
           {categories.map((item) => (
             <div
               key={item._id}
-              className="min-w-1/6 max-sm:min-w-1/2 flex justify-center"
+              className="min-w-1/6 max-sm:min-w-1/3 flex justify-center"
             >
               <CategoryCard item={item} />
             </div>
