@@ -25,13 +25,10 @@ export const Cart = () => {
             <p></p>
           </div>
         </div>
-        <div>
-          {/* <CartItem /> */}
-          {/* <CartItem /> */}
+        <div className="max-sm:min-h-48">
           {cartItem?.map((item, index) => (
             <CartItem key={index} item={item} />
           ))}
-          {/* {JSON.stringify(cartItem)} */}
         </div>
       </div>
       <div className="w-[350px] max-sm:w-full h-fit p-4  rounded-2xl bg-gray-50 flex flex-col justify-center">
