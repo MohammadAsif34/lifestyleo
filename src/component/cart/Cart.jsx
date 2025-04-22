@@ -26,11 +26,11 @@ export const Cart = () => {
           </div>
         </div>
         <div>
-          <CartItem />
-          <CartItem />
-          {/* {cartItem?.map((item, index) => (
+          {/* <CartItem /> */}
+          {/* <CartItem /> */}
+          {cartItem?.map((item, index) => (
             <CartItem key={index} item={item} />
-          ))} */}
+          ))}
           {/* {JSON.stringify(cartItem)} */}
         </div>
       </div>

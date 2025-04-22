@@ -109,7 +109,7 @@ const ProductCard = ({ item }) => {
   };
   return (
     <div className="w-full h-fit  overflow-hidden ">
-      <div className="w-full h-[350px] max-sm:h-[200px] bg-gray-100 relative border rounded-xl overflow-hidden cursor-pointer">
+      <div className="w-full h-[350px] max-sm:h-[200px] bg-gray-100 relative border border-gray-300 rounded-xl overflow-hidden cursor-pointer">
         <img src={item.image} alt="" className="w-full h-full object-cover" />
         <div className="w-full h-full p-5 absolute top-0 right-0 hover:bg-white/30 flex justify-center items-end group">
           <div className="px-8 py-2 capitalize hover:bg-black hover:text-white opacity-0 scale-95 bg-white  transition-all duration-300  rounded-full  group-hover:opacity-100 group-hover:scale-100">
